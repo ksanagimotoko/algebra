@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body >
+    <h1> ALGEBRA</h1>
+    3자리 숫자 더하기 문제입니다.(총5문제)<br/>
+    <button onClick="problem()"> START </button>
+    <p id = "answer"></p>
+    
+    <script>
+
+        function problem() {
+            var a,b;
+            // var b;
+            var p;
+            var ans;
+            var stackAns="";
+            var ansQ=document.querySelector('#answer');
+            var proQ=document.querySelector('#plm');
+
+            // ans.innerHTML = "TEST";
+                
+            for (var i =0; i<5; i++){
+                a = Math.floor(Math.random()*1000);
+                b = Math.floor(Math.random()*1000);
+                p = String(a)+"+"+String(b);
+                
+                ans = prompt(p);
+                if ((a+b)==parseInt(ans)){
+                    stackAns = stackAns+p+"="+ ans+"(0)"+"<br/>";
+                }
+                else {
+                    stackAns = stackAns+p+"="+ ans+"(x)"+"<br/>";
+                }
+                
+            }
+                           
+
+                ansQ.innerHTML = stackAns;
+                
+                
+
+            
+                
+          
+        }
+      
+    </script>
+    
+</body>
+</html>
